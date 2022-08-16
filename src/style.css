@@ -1,0 +1,102 @@
+*, ::before*, ::after*{
+    box-sizing: border-box;
+   
+}
+.App{
+    margin:20px;
+}
+.resource-sorter-text{
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    align-self: center;
+    margin-right:5px;
+}
+.appointment-content-container{
+    display:flex;
+    flex-wrap: wrap;
+    height:100%;
+    width:100%;
+}
+.appointment-content-tags{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap:5px;
+    color: #f3f3f3;
+    padding:5px;
+    height:100%;
+    
+}
+.appointment-content-tag-location,
+.appointment-content-tag-staff{
+    justify-self: flex-start;
+    background-color: #252525;
+    padding:5px;
+    border-radius: 5px;
+    text-align: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+.appointment-content-details{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding:5px;
+    text-align: center;
+}
+.appointment-content-title,
+.appointment-content-time,
+.appointment-content-canceled{
+    margin:0;
+    padding:0;
+    color:white;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, .8);
+    letter-spacing: 1px;
+    font-weight: 600;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+/**/
+.page-title{
+    text-align: center;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+    letter-spacing: 1px;
+    line-height: 1.6;
+    font-weight: 600;
+}
+
+.control-panel{
+    position:absolute;
+    right:30px;
+    top:15px;
+    display:flex;
+    gap:10px;
+}
+.control-panel-group,
+.control-panel-views{
+    display:flex;
+    gap:10px;
+    justify-content: flex-end;
+}
+.view-btn{
+    background-color: #252525;
+    color:#f3f3f3;
+    padding:10px 20px;
+    border: 1px solid #f3f3f3;
+    border-radius: 5px;
+    letter-spacing: 1px;
+}
+.view-btn:hover{
+    background-color: #f3f3f3;
+    color: #252525;
+}
+@media only screen and (max-width: 1300px)  {
+    header{
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 10px;
+    }
+    .control-panel{
+        position:unset;
+        align-self: center;
+    }
+}

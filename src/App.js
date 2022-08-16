@@ -1,25 +1,43 @@
-import logo from './logo.svg';
-import './App.css';
+import './style.css'
+import StaffGroupedCalendar from './components/StaffGroupedCalendar';
+import LocationGroupedCalendar from './components/LocationGroupedCalendar';
+import { useState } from 'react';
+import BaseCalendar from './components/BaseCalendar';
+//import BaseCalendar from './components/BaseCalendar'
 
 function App() {
+
+  const [view, setView] = useState("default")
+
+  let calendarDisplay
+
+  switch(view){
+    case "default":
+      calendarDisplay = <BaseCalendar/>
+      break;
+    case "staff-grouped-week":
+      calendarDisplay = <StaffGroupedCalendar />
+      break;
+    case "location-grouped-week":
+      calendarDisplay = <LocationGroupedCalendar />
+      break;
+    default:
+      calendarDisplay = <BaseCalendar/>
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+      <header>
+        <h1 className="page-title">Applied Behaviorial Science Institute</h1>
+        <div className='control-panel'>
+          <button className='view-btn default-btn' onClick={()=>setView('default')}>Default</button>
+          <button className='view-btn staff-btn' onClick={()=>setView("staff-grouped-week")}>Staff</button>
+          <button className='view-btn location-btn' onClick={()=>setView("location-grouped-week")}>Location</button>
+        </div>
       </header>
+      {calendarDisplay}
     </div>
-  );
+  ); 
 }
 
 export default App;
