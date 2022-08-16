@@ -3,7 +3,6 @@ import StaffGroupedCalendar from './components/StaffGroupedCalendar';
 import LocationGroupedCalendar from './components/LocationGroupedCalendar';
 import { useState } from 'react';
 import BaseCalendar from './components/BaseCalendar';
-//import BaseCalendar from './components/BaseCalendar'
 
 function App() {
 
@@ -28,7 +27,7 @@ function App() {
   return (
     <div className="App">
       <header>
-        <h1 className="page-title">Applied Behaviorial Science Institute</h1>
+        <h1 className="page-title">ABSI Schedule</h1>
         <div className='control-panel'>
           <button className='view-btn default-btn' onClick={()=>setView('default')}>Default</button>
           <button className='view-btn staff-btn' onClick={()=>setView("staff-grouped-week")}>Staff</button>
