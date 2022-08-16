@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/AbsiSchedule/static/css/main.8bf70ded.css",
+    "main.js": "/AbsiSchedule/static/js/main.7a13b859.js",
+    "index.html": "/AbsiSchedule/index.html",
+    "main.8bf70ded.css.map": "/AbsiSchedule/static/css/main.8bf70ded.css.map",
+    "main.7a13b859.js.map": "/AbsiSchedule/static/js/main.7a13b859.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.8bf70ded.css",
+    "static/js/main.7a13b859.js"
+  ]
+}
